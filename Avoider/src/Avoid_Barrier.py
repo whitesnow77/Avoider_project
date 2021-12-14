@@ -19,24 +19,24 @@ class SelfDrive:
         print("left : ", left)
         print("right : ", right)
         
-        if front > 0.2 or front == 0.0:
+        if front > 0.25 or front == 0.0:
             turtle_vel.linear.x = 0.15
         else:
             turtle_vel.linear.x = 0.0
-            if left < 0.2 or left != 0:
-                if right < 0.2:
+            if left < 0.25 or left != 0:
+                if right < 0.25:
                     turtle_vel.angular.z = -1.5
                 else:
                     turtle_vel.angular.z = 1.5
-            elif right < 0.2 or right != 0:
-                if left < 0.2:
+            elif right < 0.25 or right != 0:
+                if left < 0.25:
                     turtle_vel.angular.z = 1.5
                 else:
                     turtle_vel.angular.z = -1.5
-        if left < 0.2 and left != 0:
+        if left < 0.25 and left != 0:
             turtle_vel.linear.x = 0
             turtle_vel.angular.z = -0.5
-        if right < 0.2 and right != 0:
+        if right < 0.25 and right != 0:
             turtle_vel.linear.x = 0
             turtle_vel.angular.z = 0.5
         
